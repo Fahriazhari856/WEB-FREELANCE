@@ -1,0 +1,280 @@
+body {
+    background-color: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Sembunyikan Scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #00f0ff;
+    border-radius: 10px;
+}
+
+/* Galeri */
+.gallery-container {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+.gallery-container:active {
+    cursor: grabbing;
+}
+
+/* Animasi Cover Galeri yang Diperhalus */
+.gallery-item {
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, filter, opacity;
+}
+
+/* Background efek */
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.glow-text {
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+/* Marquee Seamless - Tidak berhenti meski di hover */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 40s linear infinite;
+}
+
+/* 👇 INI YANG TERLEWAT: Kecepatan Marquee untuk Layar Iklan 👇 */
+.animate-marquee-slow {
+    animation: marquee 60s linear infinite;
+}
+
+.mask-edges {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+    border-right: 2px solid #00f0ff;
+    padding-right: 2px;
+    animation: blink 0.8s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #00f0ff; }
+}
+
+@keyframes fadeInSlideUpChild {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Intro Animation Styles */
+#intro-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.intro-logo {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.8em;
+    opacity: 0;
+    transform: scale(0.9);
+    color: #ffffff;
+    filter: blur(15px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.intro-logo.active {
+    opacity: 1;
+    transform: scale(1);
+    letter-spacing: 0.2em;
+    filter: blur(0);
+}
+
+.intro-finish {
+    transform: translateY(-100%) !important;
+    transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+:root {
+    --bg-body: #0a0a0a;
+    --bg-card: #1c1c1c;
+    --accent-gold: #3B9EFF;
+    --accent-gold-hover: #5DAFFF;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --glass: rgba(10, 10, 10, 0.85);
+    --transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    z-index: 1000;
+    background: transparent;
+    transition: all 0.4s ease;
+}
+
+nav.scrolled {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    height: 75px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--text-main);
+    transition: width 0.4s ease;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--accent-gold);
+    transition: width 0.4s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 2px;
+    background: var(--text-main);
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    /* Navigasi */
+    nav {
+        padding: 0 5%;
+        height: 60px;
+    }
+
+    nav.scrolled {
+        height: 55px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--glass);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Desain - Agensi Digital Futuristik</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="Portofolio.css">
+    <script src="./portofolio.js" defer></script>
+</head>
+<body class="antialiased selection:bg-neon-blue selection:text-black relative">
+
+    <div id="intro-screen">
+        <div id="loader-content" class="text-center">
+            <div id="intro-logo" class="intro-logo uppercase font-bold gold-text text-3xl md:text-5xl">Portofolio</div>
+            <div class="mt-4 h-[1px] w-0 bg-[#bf953f]/40 mx-auto transition-all duration-700" id="intro-line"></div>
+        </div>
+    </div>
+
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-neon-blue/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+    <audio id="bg-music" loop crossorigin="anonymous">
+        <source src="https://cdn.pixabay.com/download/audio/2022/02/10/audio_fc48af67b2.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav id="navbar">
+        <a href="#" class="logo">RUMAH DESAIN</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="./index.html">Dashboard</a>
+            <a href="#about">Tentang</a>
+            <a href="./Portofolio.html">Koleksi</a>
+            <a href="#team">Tim</a>
+            <a href="#features">Layanan</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+
+
+    <section class="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden bg-grid flex flex-col justify-center">
+
+        <div class="relative z-10 w-full pt-4 mb-8">
+            <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-20 pointer-events-none backdrop-blur-[2px]" style="-webkit-mask-image: linear-gradient(to right, black 20%, transparent 100%);"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 z-20 pointer-events-none backdrop-blur-[2px]" style="-webkit-mask-image: linear-gradient(to left, black 20%, transparent 100%);"></div>
+
+            <div class="flex overflow-hidden mask-edges w-full cursor-pointer hover:[animation-play-state:paused]">
+                <div id="portfolio-marquee-track" class="flex w-max animate-marquee-slow">
+                </div>
+            </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1677130996191-ca7bf9ae24cc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Background Utama" 
+             class="absolute top-0 left-0 w-full h-full object-cover mix-blend-overlay opacity-30 -z-20 transition-opacity duration-1000">
+             
+        <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/20 via-[#050505]/60 to-[#050505] -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-[#050505] to-transparent -z-10"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-4 lg:px-8 mb-8 text-center pt-8">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-white mb-4 glow-text tracking-tight h-[70px] md:h-[100px] flex flex-col items-center justify-center leading-tight">
+                <span>Eksplorasi <span id="typewriter-text" class="text-neon-blue typewriter-cursor">Portofolio</span></span> 
+                <span>Masa Depan</span>
+            </h1>
+            <p class="text-gray-400 text-xs md:text-sm leading-relaxed max-w-xl mx-auto px-2">
+                Eksplorasi batas kreativitas dengan solusi digital terdepan. Kami memadukan estetika futuristik untuk menciptakan pengalaman tak terlupakan.
+            </p>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 mb-6">
+            <div class="flex flex-wrap justify-center gap-2 font-display font-semibold" id="category-buttons">
+                <button data-category="graphic" class="cat-btn px-5 py-2 rounded-full text-gray-400 hover:text-white transition-all duration-300 uppercase tracking-widest text-[10px] md:text-xs">Graphic Design</button>
+                <button data-category="social" class="cat-btn active px-5 py-2 rounded-full bg-neon-blue text-black shadow-[0_0_10px_rgba(0,240,255,0.4)] transition-all duration-300 uppercase tracking-widest text-[10px] md:text-xs">Social Media</button>
+                <button data-category="web" class="cat-btn px-5 py-2 rounded-full text-gray-400 hover:text-white transition-all duration-300 uppercase tracking-widest text-[10px] md:text-xs">Web Development</button>
+            </div>
+        </div>
+
+        <div class="relative w-full py-6 mask-edges">
+            <div id="gallery-container" class="gallery-container flex w-full overflow-x-auto hide-scrollbar px-6 md:px-10 lg:px-16 gap-4 md:gap-6 pb-6 transition-opacity duration-500 ease-in-out items-center h-[380px] md:h-[450px]">
+                </div>
+            
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2 text-gray-500 text-xs z-30 opacity-70">
+                <i class="ph ph-arrow-left"></i>
+                <span>Geser & Klik</span>
+                <i class="ph ph-arrow-right"></i>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full mt-12 mb-4">
+            <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-20 pointer-events-none backdrop-blur-[2px]" style="-webkit-mask-image: linear-gradient(to right, black 20%, transparent 100%); mask-image: linear-gradient(to right, black 20%, transparent 100%);"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 z-20 pointer-events-none backdrop-blur-[2px]" style="-webkit-mask-image: linear-gradient(to left, black 20%, transparent 100%); mask-image: linear-gradient(to left, black 20%, transparent 100%);"></div>
+
+            <div class="flex overflow-hidden mask-edges w-full">
+                <div id="marquee-track" class="flex w-max animate-marquee">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#050505] border-t border-white/5 pt-10 pb-6">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-600 text-[10px] md:text-xs">
+            <p>&copy; 2026 Rumah Desain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="view-all-modal" class="fixed inset-0 z-[1001] hidden flex-col opacity-0 transition-opacity duration-500">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-xl transition-all" onclick="closeViewAllModal()"></div>
+        
+        <div class="relative z-10 w-full px-6 py-4 md:px-10 flex justify-between items-center border-b border-white/10 bg-[#050505]/80 backdrop-blur-md">
+            <h2 class="text-xl md:text-2xl font-display font-bold text-white glow-text">Semua <span class="text-neon-blue">Portofolio</span></h2>
+            <button onclick="closeViewAllModal()" class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:text-neon-blue border border-white/10 transition-all">
+                <i class="ph ph-x text-lg"></i>
+            </button>
+        </div>
+
+        <div class="relative z-10 w-full flex-1 overflow-y-auto custom-scrollbar p-6">
+            <div id="view-all-grid" class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-10">
+                </div>
+        </div>
+    </div>
+
+    <div id="project-modal" class="fixed inset-0 z-[1101] hidden flex-col items-center justify-center opacity-0 transition-opacity duration-500 p-3 md:p-6 lg:p-10">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-md transition-all" onclick="closeModal()"></div>
+        
+        <div id="modal-content-box" class="relative w-full max-w-4xl h-[85vh] md:h-[75vh] bg-neon-card border border-white/10 rounded-2xl shadow-2xl transform scale-95 transition-transform duration-500 ease-out flex flex-col md:flex-row overflow-hidden">
+            
+            <button onclick="closeModal()" class="absolute top-3 right-3 z-50 w-8 h-8 bg-black/60 rounded-full flex items-center justify-center text-gray-400 hover:text-neon-blue border border-white/10 transition-all backdrop-blur-md">
+                <i class="ph ph-x text-base"></i>
+            </button>
+            
+            <div id="modal-body" class="flex flex-col md:flex-row w-full h-full">
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>

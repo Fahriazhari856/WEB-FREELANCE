@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>UPWORK | Digital Agency - Graphic Design, IT & Social Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./favicon.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+     <div id="intro-screen">
+        <div id="loader-content" class="text-center">
+            <div id="intro-logo" class="intro-logo uppercase font-bold gold-text text-3xl md:text-5xl">Dashboard</div>
+            <div class="mt-4 h-[1px] w-0 bg-[#bf953f]/40 mx-auto transition-all duration-700" id="intro-line"></div>
+        </div>
+    </div>
+
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-neon-blue/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+    <audio id="bg-music" loop crossorigin="anonymous">
+        <source src="https://cdn.pixabay.com/download/audio/2022/02/10/audio_fc48af67b2.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav id="navbar">
+        <a href="#" class="logo">RUMAH DESAIN</a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#about">Tentang</a>
+            <a href="./Portofolio.html">Koleksi</a>
+            <a href="#team">Tim</a>
+            <a href="#features">Layanan</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </nav>
+
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-parallax="0.3">
+            <p class="hero-subtitle">Digital Solutions & Creative Services</p>
+            <h1>Transform Your <span>Digital Presence</span> dengan Teknologi & Kreativitas</h1>
+            <div class="cta-group">
+                <a href="./Portofolio.html" class="cta-btn">Lihat Portfolio</a>
+                <a href="#contact" class="cta-btn cta-btn-outline">Konsultasi Gratis</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section class="stats reveal">
+        <div class="stat-item">
+            <span class="stat-number" data-count="500">0</span>
+            <span class="stat-label">Proyek Selesai</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="25">0</span>
+            <span class="stat-label">Tahun Pengalaman</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="450">0</span>
+            <span class="stat-label">Klien Puas</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" data-count="15">0</span>
+            <span class="stat-label">Penghargaan</span>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="experience-box slide-in-left">
+            <h2>25</h2>
+            <p>Tahun Pengalaman Kerja</p>
+        </div>
+        <div class="about-text slide-in-right">
+            <span class="section-label">TENTANG KAMI</span>
+            <h3>Solusi Digital Terpadu oleh Tim Profesional</h3>
+            <p>RUMAH DESAIN adalah digital agency yang menghadirkan solusi terintegrasi dalam graphic design, IT
+                development, dan social media marketing. Kami percaya bahwa kesuksesan digital dimulai dari perpaduan
+                sempurna antara kreativitas, teknologi, dan strategi yang tepat.</p>
+            <p>Dengan tim profesional berpengalaman di berbagai bidang, kami berkomitmen menghadirkan solusi digital
+                yang tidak hanya menarik secara visual, tetapi juga efektif dalam mencapai tujuan bisnis Anda.</p>
+            <a href="#" class="cta-btn cta-btn-outline-gold">Baca Selengkapnya</a>
+        </div>
+    </section>
+
+    <section id="collections" class="collections">
+        <div class="section-header reveal">
+            <span class="section-label">LAYANAN KAMI</span>
+            <h2>Portfolio Digital Solutions</h2>
+            <p>Jelajahi berbagai layanan digital yang telah kami berikan dengan dedikasi dan keahlian tinggi</p>
+        </div>
+        <div class="collections-grid">
+            <div class="collection-card scale-in">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80"
+                    alt="Graphic Design">
+                <div class="collection-overlay">
+                    <span>Design</span>
+                    <h4>Graphic Design</h4>
+                    <p>Kreativitas visual yang memukau untuk identitas brand Anda</p>
+                </div>
+            </div>
+            <div class="collection-card scale-in" style="transition-delay: 0.1s;">
+                <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80"
+                    alt="IT Solutions">
+                <div class="collection-overlay">
+                    <span>Technology</span>
+                    <h4>IT Solutions</h4>
+                    <p>Solusi teknologi terdepan untuk transformasi digital bisnis Anda</p>
+                </div>
+            </div>
+            <div class="collection-card scale-in" style="transition-delay: 0.2s;">
+                <img src="https://i.pinimg.com/736x/3f/a1/9c/3fa19c6af88cf2325c53544183eb25bb.jpg"
+                    alt="Social Media">
+                <div class="collection-overlay">
+                    <span>Marketing</span>
+                    <h4>Social Media</h4>
+                    <p>Strategi konten yang engaging untuk meningkatkan brand awareness</p>
+                </div>
+            </div>
+            <div class="collection-card scale-in" style="transition-delay: 0.3s;">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                    alt="Digital Analytics">
+                <div class="collection-overlay">
+                    <span>Analytics</span>
+                    <h4>Digital Analytics</h4>
+                    <p>Data-driven insights untuk pengambilan keputusan yang lebih baik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="section-header reveal">
+            <span class="section-label">PARA AHLI KAMI</span>
+            <h2>Bertemu Dengan Tim Kreatif</h2>
+            <p>Tim profesional yang berdedikasi untuk mewujudkan visi desain Anda</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-member scale-in">
+                <div class="member-img">
+                    <img src="./PHOTO TEAM/2.jpg" alt="Adrian Wijaya">
+                </div>
+                <h4>MUH FAHRI AZHARI</h4>
+                <span>LEAD PROJECT</span>
+            </div>
+            <div class="team-member scale-in" style="transition-delay: 0.1s;">
+                <div class="member-img">
+                    <img src="./PHOTO TEAM/IMG_5468.JPG" alt="Siska Putri">
+                </div>
+                <h4>RINI</h4>
+                <span>DESIGNER</span>
+            </div>
+            <div class="team-member scale-in" style="transition-delay: 0.2s;">
+                <div class="member-img">
+                    <img src="./PHOTO TEAM/DSC03577.JPG" alt="Budi Santoso">
+                </div>
+                <h4>ANDI MUHAMMAD FAIZ</h4>
+                <span>BACKEND DEVELOPER</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="section-header reveal">
+            <span class="section-label">MENGAPA MEMILIH KAMI</span>
+            <h2>Komitmen Terhadap Keunggulan</h2>
+            <p>Kami bekerja dengan standar kepuasan pelanggan yang sangat tinggi</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item scale-in">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                </div>
+                <h5>Web Development</h5>
+                <p>Membangun website yang responsif, cepat, dan SEO-friendly menggunakan teknologi terkini untuk bisnis
+                    Anda.</p>
+            </div>
+            <div class="feature-item scale-in" style="transition-delay: 0.1s;">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                        <path d="M2 17l10 5 10-5" />
+                        <path d="M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <h5>Graphic Design</h5>
+                <p>Menciptakan identitas visual yang kuat dan memorable untuk meningkatkan brand recognition Anda.</p>
+            </div>
+            <div class="feature-item scale-in" style="transition-delay: 0.2s;">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                        <line x1="6" y1="6" x2="6.01" y2="6" />
+                        <line x1="6" y1="18" x2="6.01" y2="18" />
+                    </svg>
+                </div>
+                <h5>Social Media Management</h5>
+                <p>Mengelola dan mengoptimalkan kehadiran brand Anda di berbagai platform media sosial dengan strategi
+                    yang tepat.</p>
+            </div>
+            <div class="feature-item scale-in" style="transition-delay: 0.3s;">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                </div>
+                <h5>Digital Marketing</h5>
+                <p>Strategi pemasaran digital yang data-driven untuk meningkatkan konversi dan ROI bisnis Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="section-header reveal">
+            <span class="section-label">PORTFOLIO</span>
+            <h2>Karya Terbaru Kami</h2>
+            <p>Koleksi project digital yang telah kami selesaikan dengan hasil memuaskan</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=600&q=80"
+                    alt="Web Design Project">
+                <div class="gallery-info">
+                    <span class="gallery-category">Web Design</span>
+                    <h4>E-Commerce Platform</h4>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80"
+                    alt="Branding Project">
+                <div class="gallery-info">
+                    <span class="gallery-category">Branding</span>
+                    <h4>Corporate Identity</h4>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80"
+                    alt="Mobile App Design">
+                <div class="gallery-info">
+                    <span class="gallery-category">Mobile App</span>
+                    <h4>Finance Management App</h4>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=600&q=80"
+                    alt="Social Media Campaign">
+                <div class="gallery-info">
+                    <span class="gallery-category">Social Media</span>
+                    <h4>Instagram Campaign</h4>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80"
+                    alt="UI Design">
+                <div class="gallery-info">
+                    <span class="gallery-category">UI Design</span>
+                    <h4>Dashboard Analytics</h4>
+                </div>
+            </div>
+            <div class="gallery-item reveal">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80"
+                    alt="Web Development">
+                <div class="gallery-info">
+                    <span class="gallery-category">Development</span>
+                    <h4>SaaS Platform</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="relative z-10 w-full py-16 md:py-24 bg-[#050505]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
+                Apa Kata <span class="text-neon-blue drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]">Klien Kami</span>
+            </h2>
+            <p class="text-gray-400 mt-4 text-sm max-w-2xl mx-auto">Pengalaman dan kepuasan mereka adalah prioritas utama kami dalam setiap karya yang diciptakan.</p>
+        </div>
+
+        <div class="relative w-full overflow-hidden mask-edges mt-8">
+            <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-20 pointer-events-none backdrop-blur-[2px]" style="-webkit-mask-image: linear-gradient(to right, black 20%, transparent 100%); mask-image: linear-gradient(to right, black 20%, transparent 100%);"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 z-20 pointer-events-none backdrop-blur-[2px]" style="-webkit-mask-image: linear-gradient(to left, black 20%, transparent 100%); mask-image: linear-gradient(to left, black 20%, transparent 100%);"></div>
+
+            <div id="marquee-track" class="flex w-max animate-marquee hover:[animation-play-state:paused] cursor-grab active:cursor-grabbing py-4">
+                </div>
+        </div>
+
+    </div>
+</section>
+<section id="contact" class="contact">
+        <div class="section-header reveal">
+            <span class="section-label">HUBUNGI KAMI</span>
+            <h2>Mari Wujudkan Visi Digital Anda</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info slide-in-left">
+                <h3>Konsultasi Gratis</h3>
+                <p>Tim ahli kami siap membantu Anda dari tahap perencanaan hingga hasil akhir yang memukau. Hubungi kami
+                    sekarang untuk konsultasi gratis!</p>
+                <div class="contact-details">
+                    <p>📍 Jl. Digital Hub No. 12, Jakarta Selatan 12940</p>
+                    <p>📞 +62 812 3456 789</p>
+                    <p>✉️ hello@kitchor-digital.id</p>
+                    <p>🕐 Senin - Jumat: 09:00 - 18:00</p>
+                </div>
+            </div>
+            <form class="slide-in-right">
+                <input type="text" placeholder="Nama Lengkap *" required>
+                <input type="email" placeholder="Alamat Email *" required>
+                <input type="tel" placeholder="Nomor Telepon">
+                <textarea rows="5" placeholder="Ceritakan tentang proyek digital Anda..." required></textarea>
+                <button type="submit" class="cta-btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">KITCHOR</span>
+                <p>Digital agency yang menghadirkan solusi terintegrasi dalam graphic design, web development, dan
+                    digital marketing untuk membantu bisnis Anda berkembang di era digital.</p>
+                <div class="socials">
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="LinkedIn">💼</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#about">Tentang Kami</a>
+                <a href="#team">Tim Kami</a>
+                <a href="#collections">Portofolio</a>
+                <a href="#">Karir</a>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="#">Web Development</a>
+                <a href="#">Graphic Design</a>
+                <a href="#">Social Media</a>
+                <a href="#">Digital Marketing</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#contact">Kontak</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RUMAH DESAIN Digital Agency. Innovation in every pixel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="scroll-top" id="scrollTop">↑</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+    <script src="https://unpkg.com/lucide"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
